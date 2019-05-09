@@ -46,7 +46,7 @@ versions.lottieVersion = "2.6.0"
 versions.robolectric = "3.4.2"
 versions.oss_licenses = "16.0.0"
 versions.license_plugin = "0.9.3"
-versions.koin = "1.0.0"
+versions.koin = "2.0.0-GA"
 def deps = [:]
 
 def build_versions = [:]
