@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">CleanPractice</string>
+    <string name="app_name">Clean Practice</string>
+    <string name="ok">OK</string>
 </resources>
