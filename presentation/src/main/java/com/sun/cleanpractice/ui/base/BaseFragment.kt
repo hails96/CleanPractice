@@ -158,7 +158,7 @@ abstract class BaseFragment<ViewBinding : ViewDataBinding, ViewModel : BaseViewM
         val transaction = activity?.supportFragmentManager?.beginTransaction()
         if (addToBackStack) transaction?.addToBackStack(TAG)
         if (transit != -1) transaction?.setTransition(transit)
-        dialogFragment.show(transaction, TAG)
+        dialogFragment.show(transaction!!, TAG)
     }
 
     @SuppressLint("WrongConstant")
