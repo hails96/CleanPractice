@@ -6,6 +6,8 @@ apply plugin: 'kotlin-kapt'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
 android {
     compileSdkVersion build_versions.target_sdk
     defaultConfig {
@@ -79,6 +81,7 @@ dependencies {
     implementation deps.support.recyclerview
     implementation deps.support.cardview
     implementation deps.support.design
+    implementation deps.support.legacy
     implementation deps.constraint_layout
 
     implementation deps.room.runtime
@@ -86,6 +89,9 @@ dependencies {
 
     implementation deps.lifecycle.extensions
     implementation deps.lifecycle.java8
+
+    implementation deps.navigation.fragment
+    implementation deps.navigation.ui
 
     implementation deps.retrofit.runtime
     implementation deps.retrofit.gson
@@ -111,7 +117,6 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-core-utils'
     })
     testImplementation deps.mockito.core
-    androidTestImplementation deps.navigation.testing_ktx
     androidTestImplementation deps.support.app_compat
     androidTestImplementation deps.support.recyclerview
     androidTestImplementation deps.support.cardview

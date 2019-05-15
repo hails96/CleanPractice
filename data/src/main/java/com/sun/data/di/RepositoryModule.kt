@@ -7,7 +7,7 @@ import com.sun.data.Constants
 import com.sun.data.local.db.AppDatabase
 import com.sun.data.local.pref.AppPrefs
 import com.sun.data.local.pref.PrefHelper
-import org.koin.dsl.module
+import org.koin.dsl.module.module
 
 val repositoryModule = module {
     single { createDatabaseName() }

@@ -1,6 +1,6 @@
 package com.sun.data.di
 
-import org.koin.dsl.module
+import org.koin.dsl.module.module
 
 val entityMapperModule = module {
 
