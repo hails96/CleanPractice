@@ -11,7 +11,25 @@
     <style name="HorizontalDivider">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">0.5dp</item>
-        <item name="android:background">#000000</item>
+        <item name="android:background">@color/color_black</item>
         <item name="android:alpha">0.12</item>
+    </style>
+
+    <style name="ImageMovieGenre">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">200dp</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_marginTop">@dimen/dp_10</item>
+    </style>
+
+    <style name="TextMovieGenre">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:textSize">@dimen/sp_20</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingStart">@dimen/dp_20</item>
+        <item name="android:background">@drawable/background_black_gradient</item>
+        <item name="android:gravity">center_vertical</item>
     </style>
 </resources>
