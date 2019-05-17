@@ -1,6 +1,6 @@
 package com.sun.cleanpractice.di
 
-import com.sun.cleanpractice.ui.screen.detail.GenreDetailViewModel
+import com.sun.cleanpractice.ui.screen.genredetail.GenreDetailViewModel
 import com.sun.cleanpractice.ui.screen.favorite.FavoriteViewModel
 import com.sun.cleanpractice.ui.screen.home.HomeViewModel
 import com.sun.cleanpractice.ui.screen.main.MainViewModel

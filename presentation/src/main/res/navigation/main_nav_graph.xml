@@ -18,7 +18,7 @@
 
     <fragment
         android:id="@+id/genreDetailFragment"
-        android:name="com.sun.cleanpractice.ui.screen.detail.GenreDetailFragment"
+        android:name="com.sun.cleanpractice.ui.screen.genredetail.GenreDetailFragment"
         android:label="Genre Detail"
         tools:layout="@layout/fragment_genre_detail">
 

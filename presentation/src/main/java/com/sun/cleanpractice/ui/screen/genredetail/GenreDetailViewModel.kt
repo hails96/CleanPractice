@@ -1,4 +1,4 @@
-package com.sun.cleanpractice.ui.screen.detail
+package com.sun.cleanpractice.ui.screen.genredetail
 
 import androidx.lifecycle.MutableLiveData
 import com.sun.cleanpractice.model.MovieItem
