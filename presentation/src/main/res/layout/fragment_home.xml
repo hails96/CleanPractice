@@ -19,29 +19,13 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/imageLatest"
-                style="@style/ImageMovieGenre"
-                android:onClick='@{() -> viewModel.onMovieGenreClick("latest")}'
-                android:src="@drawable/image_genre_latest"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                style="@style/TextMovieGenre"
-                android:text="@string/text_latest"
-                app:layout_constraintBottom_toBottomOf="@id/imageLatest"
-                app:layout_constraintEnd_toEndOf="@id/imageLatest"
-                app:layout_constraintStart_toStartOf="@id/imageLatest" />
-
-            <ImageView
                 android:id="@+id/imageNowPlaying"
                 style="@style/ImageMovieGenre"
                 android:onClick='@{() -> viewModel.onMovieGenreClick("now_playing")}'
                 android:src="@drawable/image_genre_latest"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/imageLatest" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 style="@style/TextMovieGenre"

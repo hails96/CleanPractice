@@ -47,15 +47,16 @@ android {
     }
 
     libraryVariants.all { variant ->
-        def BASE_URL = "http://example.com/"
+        def BASE_URL = "https://api.themoviedb.org/3/"
 
         if (variant.getName().contains("develop")) {
-            BASE_URL = "http://example.com/"
+            BASE_URL = "https://api.themoviedb.org/3/"
         } else if (variant.getName().contains("production")) {
-            BASE_URL = "http://example.com/"
+            BASE_URL = "https://api.themoviedb.org/3/"
         }
 
         variant.buildConfigField "String", "BASE_URL", "\"${BASE_URL}\""
+        variant.buildConfigField "String", "API_KEY", MOVIE_DB_API_KEY
     }
 
     testOptions {

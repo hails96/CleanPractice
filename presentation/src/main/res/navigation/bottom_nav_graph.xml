@@ -21,6 +21,6 @@
     <fragment
         android:id="@+id/favoriteFragment"
         android:name="com.sun.cleanpractice.ui.screen.favorite.FavoriteFragment"
-        android:label="Search"
+        android:label="Favorite"
         tools:layout="@layout/fragment_search" />
 </navigation>

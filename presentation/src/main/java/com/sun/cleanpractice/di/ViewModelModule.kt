@@ -15,5 +15,5 @@ val viewModelModule = module {
     viewModel { HomeViewModel() }
     viewModel { SearchViewModel() }
     viewModel { FavoriteViewModel() }
-    viewModel { GenreDetailViewModel() }
+    viewModel { GenreDetailViewModel(get(), get(), get()) }
 }
