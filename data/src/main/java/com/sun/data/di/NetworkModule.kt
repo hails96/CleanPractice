@@ -2,6 +2,7 @@ package com.sun.data.di
 
 import com.sun.data.BuildConfig
 import com.sun.data.di.Properties.TIME_OUT
+import com.sun.data.remote.api.GenreApi
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -16,6 +17,7 @@ val networkModule = module {
     single(name = ("header")) { createHeaderInterceptor() }
     single { createOkHttpClient(get(name = "logging"), get(name = "header")) }
     single { createAppRetrofit(get()) }
+    single { createGenreApi(get()) }
 }
 
 object Properties {
@@ -33,7 +35,7 @@ fun createHeaderInterceptor(): Interceptor {
     return Interceptor { chain ->
         val request = chain.request()
         val newUrl = request.url().newBuilder()
-//            .addQueryParameter("api_key", "")
+            .addQueryParameter("api_key", BuildConfig.API_KEY)
             .build()
         val newRequest = request.newBuilder()
             .url(newUrl)
@@ -61,4 +63,8 @@ fun createAppRetrofit(okHttpClient: OkHttpClient): Retrofit {
         .baseUrl(BuildConfig.BASE_URL)
         .client(okHttpClient)
         .build()
+}
+
+fun createGenreApi(retrofit: Retrofit): GenreApi {
+    return retrofit.create(GenreApi::class.java)
 }
