@@ -169,8 +169,8 @@ work.runtime_ktx = "android.arch.work:work-runtime-ktx:$versions.work"
 deps.work = work
 
 def navigation = [:]
-navigation.fragment = "androidx.navigation:navigation-fragment:$versions.navigation"
-navigation.ui = "androidx.navigation:navigation-ui:$versions.navigation"
+navigation.fragment = "androidx.navigation:navigation-fragment-ktx:$versions.navigation"
+navigation.ui = "androidx.navigation:navigation-ui-ktx:$versions.navigation"
 deps.navigation = navigation
 
 def permissions = [:]

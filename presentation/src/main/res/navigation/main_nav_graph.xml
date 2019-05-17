@@ -9,5 +9,23 @@
         android:id="@+id/navigationFragment"
         android:name="com.sun.cleanpractice.ui.screen.navigation.NavigationFragment"
         android:label="Navigation"
-        tools:layout="@layout/fragment_navigation" />
+        tools:layout="@layout/fragment_navigation">
+
+        <action
+            android:id="@+id/from_genre_to_detail"
+            app:destination="@id/genreDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/genreDetailFragment"
+        android:name="com.sun.cleanpractice.ui.screen.detail.GenreDetailFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_genre_detail">
+
+        <argument
+            android:name="genre"
+            android:defaultValue="A"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
 </navigation>

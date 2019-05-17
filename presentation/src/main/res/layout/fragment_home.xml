@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -8,17 +8,95 @@
             type="com.sun.cleanpractice.ui.screen.home.HomeViewModel" />
     </data>
 
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.screen.home.HomeFragment">
 
-        <!-- TODO: Update blank fragment layout -->
-        <TextView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment" />
+            android:layout_height="wrap_content">
 
-    </FrameLayout>
+            <ImageView
+                android:id="@+id/imageLatest"
+                style="@style/ImageMovieGenre"
+                android:onClick='@{() -> viewModel.onMovieGenreClick("latest")}'
+                android:src="@drawable/image_genre_latest"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                style="@style/TextMovieGenre"
+                android:text="@string/text_latest"
+                app:layout_constraintBottom_toBottomOf="@id/imageLatest"
+                app:layout_constraintEnd_toEndOf="@id/imageLatest"
+                app:layout_constraintStart_toStartOf="@id/imageLatest" />
+
+            <ImageView
+                android:id="@+id/imageNowPlaying"
+                style="@style/ImageMovieGenre"
+                android:onClick='@{() -> viewModel.onMovieGenreClick("now_playing")}'
+                android:src="@drawable/image_genre_latest"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageLatest" />
+
+            <TextView
+                style="@style/TextMovieGenre"
+                android:text="@string/text_now_playing"
+                app:layout_constraintBottom_toBottomOf="@id/imageNowPlaying"
+                app:layout_constraintEnd_toEndOf="@id/imageNowPlaying"
+                app:layout_constraintStart_toStartOf="@id/imageNowPlaying" />
+
+            <ImageView
+                android:id="@+id/imagePopular"
+                style="@style/ImageMovieGenre"
+                android:onClick='@{() -> viewModel.onMovieGenreClick("popular")}'
+                android:src="@drawable/image_genre_latest"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageNowPlaying" />
+
+            <TextView
+                style="@style/TextMovieGenre"
+                android:text="@string/text_popular"
+                app:layout_constraintBottom_toBottomOf="@id/imagePopular"
+                app:layout_constraintEnd_toEndOf="@id/imagePopular"
+                app:layout_constraintStart_toStartOf="@id/imagePopular" />
+
+            <ImageView
+                android:id="@+id/imageTopRated"
+                style="@style/ImageMovieGenre"
+                android:onClick='@{() -> viewModel.onMovieGenreClick("top_rated")}'
+                android:src="@drawable/image_genre_latest"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imagePopular" />
+
+            <TextView
+                style="@style/TextMovieGenre"
+                android:text="@string/text_top_rated"
+                app:layout_constraintBottom_toBottomOf="@id/imageTopRated"
+                app:layout_constraintEnd_toEndOf="@id/imageTopRated"
+                app:layout_constraintStart_toStartOf="@id/imageTopRated" />
+
+            <ImageView
+                android:id="@+id/imageUpcoming"
+                style="@style/ImageMovieGenre"
+                android:onClick='@{() -> viewModel.onMovieGenreClick("upcoming")}'
+                android:src="@drawable/image_genre_latest"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageTopRated" />
+
+            <TextView
+                style="@style/TextMovieGenre"
+                android:text="@string/text_upcoming"
+                app:layout_constraintBottom_toBottomOf="@id/imageUpcoming"
+                app:layout_constraintEnd_toEndOf="@id/imageUpcoming"
+                app:layout_constraintStart_toStartOf="@id/imageUpcoming" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </layout>
