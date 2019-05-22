@@ -9,7 +9,8 @@ import com.sun.data.local.db.AppDatabase
 import com.sun.data.local.pref.AppPrefs
 import com.sun.data.local.pref.PrefHelper
 import com.sun.domain.repository.GenreRepository
-import org.koin.dsl.module.module
+import io.reactivex.schedulers.Schedulers.single
+import org.koin.dsl.module
 import org.koin.experimental.builder.create
 
 val repositoryModule = module {
@@ -17,7 +18,7 @@ val repositoryModule = module {
     single { createAppDatabase(get(), get()) }
     single<PrefHelper> { AppPrefs(get(), get()) }
     single { Gson() }
-    single<GenreRepository> { create<GenreRepositoryImpl>() }
+    single<GenreRepository> { create<GenreRepositoryImpl>(get()) }
 }
 
 fun createDatabaseName() = Constants.DATABASE_NAME

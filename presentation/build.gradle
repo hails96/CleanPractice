@@ -87,7 +87,8 @@ dependencies {
     implementation deps.room.runtime
     kapt deps.room.compiler
 
-    implementation deps.lifecycle.java8
+//    implementation deps.lifecycle.extensions
+//    implementation deps.lifecycle.java8
 
     implementation deps.navigation.fragment
     implementation deps.navigation.ui
@@ -131,4 +132,6 @@ dependencies {
     androidTestImplementation(deps.arch_core.testing, {})
     androidTestImplementation deps.dexmaker
     androidTestImplementation deps.mockito.core, { exclude group: 'net.bytebuddy' }
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0'
+    kapt 'androidx.lifecycle:lifecycle-compiler:2.0.0'
 }
