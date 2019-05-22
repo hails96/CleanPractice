@@ -18,7 +18,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            bind:loadImage="@{ item.poster_path }"
             tools:src="@drawable/bg_default_image" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -30,7 +29,6 @@
             android:paddingTop="@dimen/dp_10"
             android:paddingEnd="@dimen/dp_16"
             android:paddingBottom="@dimen/dp_10"
-            android:text="@{ item.title }"
             android:textColor="@android:color/white"
             android:textSize="@dimen/sp_16"
             bind:layout_constraintBottom_toBottomOf="parent"

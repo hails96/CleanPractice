@@ -7,7 +7,7 @@ import com.sun.cleanpractice.R
 import com.sun.cleanpractice.databinding.FragmentNavigationBinding
 import com.sun.cleanpractice.ui.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_navigation.*
-import org.koin.androidx.viewmodel.ext.android.viewModel
+import org.koin.androidx.viewmodel.ext.viewModel
 
 class NavigationFragment : BaseFragment<FragmentNavigationBinding, NavigationViewModel>() {
 

@@ -8,7 +8,7 @@ import com.sun.cleanpractice.R
 import com.sun.cleanpractice.databinding.FragmentHomeBinding
 import com.sun.cleanpractice.ui.base.BaseFragment
 import com.sun.cleanpractice.ui.screen.navigation.NavigationFragmentDirections
-import org.koin.androidx.viewmodel.ext.android.viewModel
+import org.koin.androidx.viewmodel.ext.viewModel
 
 class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>() {
 

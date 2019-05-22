@@ -8,14 +8,13 @@ import com.sun.data.di.entityMapperModule
 import com.sun.data.di.networkModule
 import com.sun.data.di.repositoryModule
 import com.sun.domain.di.useCaseModule
-import org.koin.android.ext.android.startKoin
+import org.koin.core.context.startKoin
 
 class MainApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        startKoin(
-            this,
+        startKoin {
             listOf(
                 entityMapperModule,
                 networkModule,
@@ -25,6 +24,6 @@ class MainApplication : Application() {
                 itemMapperModule,
                 viewModelModule
             )
-        )
+        }
     }
 }
