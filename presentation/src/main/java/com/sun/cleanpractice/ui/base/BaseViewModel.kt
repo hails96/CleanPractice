@@ -2,6 +2,7 @@ package com.sun.cleanpractice.ui.base
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+
 import com.sun.data.remote.BaseException
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
